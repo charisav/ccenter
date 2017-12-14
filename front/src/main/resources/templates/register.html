@@ -8,7 +8,7 @@
 	<form th:object="${user}" th:action="@{/register}" method="post">
 		<ul>
 			<li>
-				<label>First name <input type="text" th:value="@{firstName}" required="required"/></label>
+				<label>First name <input type="text" name="first_name" th:value="@{firstName}"/></label>
 			</li>
 			<li>
 				<label>Last name <input type="text" th:value="@{lastName}" required="required"/></label>

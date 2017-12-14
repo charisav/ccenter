@@ -8,20 +8,20 @@ public class User {
 	private String email;
 	private String username;
 	private String password;
-	private String confirmPassword;
+	private String passwordConfirm;
 	private Date dateOfBirth;
 	private String gender;
 	
 	public User() {}
 	
 	public User(String firstName, String lastName, String email, String username, String password,
-			String confirmPassword, Date dateOfBirth, String gender) {
+			String passwordConfirm, Date dateOfBirth, String gender) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.username = username;
 		this.password = password;
-		this.confirmPassword = confirmPassword;
+		this.passwordConfirm = passwordConfirm;
 		this.dateOfBirth = dateOfBirth;
 		this.gender = gender;
 	}
@@ -66,12 +66,12 @@ public class User {
 		this.password = password;
 	}
 
-	public String getConfirmPassword() {
-		return confirmPassword;
+	public String getPasswordConfirm() {
+		return passwordConfirm;
 	}
 
-	public void setConfirmPassword(String confirmPassword) {
-		this.confirmPassword = confirmPassword;
+	public void setPasswordConfirm(String confirmPassword) {
+		this.passwordConfirm = confirmPassword;
 	}
 
 	public Date getDateOfBirth() {

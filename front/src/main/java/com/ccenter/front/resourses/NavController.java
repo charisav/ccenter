@@ -1,7 +1,10 @@
 package com.ccenter.front.resourses;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ccenter.front.model.User;
 
 @Controller
 public class NavController {
@@ -16,7 +19,8 @@ public class NavController {
 	}
 	
 	@GetMapping("/register")
-	public String register() {
+	public String register(Model model) {
+		model.addAttribute("user", new User());
 		return "register";
 	}
 }

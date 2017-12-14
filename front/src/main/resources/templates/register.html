@@ -8,23 +8,23 @@
 	<form th:object="${user}" th:action="@{/register}" method="post">
 		<ul>
 			<li>
-				<label>First name <input type="text" name="first_name" th:value="@{firstName}"/></label>
+				<label>First name <input type="text" name="first_name" th:value="*{firstName}"/></label>
 			</li>
 			<li>
-				<label>Last name <input type="text" th:value="@{lastName}" required="required"/></label>
+				<label>Last name <input type="text" th:value="*{lastName}" required="required"/></label>
 			</li>
 			<li>
-				<label>Email address <input type="email" th:value="@{email}" required="required"/></label>
+				<label>Email address <input type="email" th:value="*{email}" required="required"/></label>
 			</li>
 			<li>
-				<label>Username <input type="text" th:value="@{username}" required="required"/></label>
+				<label>Username <input type="text" th:value="*{username}" required="required"/></label>
 			</li>
 			<li>
-				<label>Date of birth <input type="date" th:value="@{dateOfBirth}" required="required"/></label>
+				<label>Date of birth <input type="date" th:value="*{dateOfBirth}" required="required"/></label>
 			</li>
 			<li>
 				<label>Gender
-					<select th:value="@{gender}" required="required">
+					<select th:value="*{gender}" required="required">
 						<option value="male">Male</option>
 						<option value="female">Female</option>
 						<option value="other">Other</option>
@@ -32,10 +32,10 @@
 				</label>
 			</li>
 			<li>
-				<label>Password <input type="password" th:value="@{password}" required="required"/></label>
+				<label>Password <input type="password" th:value="*{password}" required="required"/></label>
 			</li>
 			<li>
-				<label>Password Confirm <input type="password" th:value="@{passwordConfirm}" required="required"/></label>
+				<label>Password Confirm <input type="password" th:value="*{passwordConfirm}" required="required"/></label>
 			</li>
 			<li>
 				<input type="submit" value="Submit"/>

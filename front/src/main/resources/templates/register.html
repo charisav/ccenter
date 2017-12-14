@@ -5,5 +5,39 @@
 </head>
 <body>
 	<div th:replace="header :: nav"></div>
+	<form th:object="${user}" th:action="@{/register}" method="post">
+		<ul>
+			<li>
+				<label>First name <input type="text" required/></label>
+			</li>
+			<li>
+				<label>Last name <input type="text" required/></label>
+			</li>
+			<li>
+				<label>Email address <input type="email" required/></label>
+			</li>
+			<li>
+				<label>Username <input type="text" required/></label>
+			</li>
+			<li>
+				<label>Date of birth <input type="date" required></label>
+			</li>
+			<li>
+				<label>Gender
+					<select name="gender">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="other">Other</option>
+					</select>
+				</label>
+			</li>
+			<li>
+				<label>Password <input type="password" required/></label>
+			</li>
+			<li>
+				<label>Password Confirm <input type="password" required/></label>
+			</li>
+		</ul>
+	</form>
 </body>
 </html>

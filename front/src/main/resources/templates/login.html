@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<div th:replace="header :: nav"></div>
+	<form th:action="@{/login}" method="post">
+		<ul>
+			<li>
+				<label>Username <input type="text" name="username" required="required"/></label>
+			</li>
+			<li>
+				<label>Password <input type="text" name="password" required="required"/></label>
+			</li>
+			<li>
+				<input type="submit" value="Sign in"/>
+			</li>
+		</ul>
+	</form>
+</body>
+</html>
